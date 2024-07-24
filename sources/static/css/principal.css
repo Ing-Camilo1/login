@@ -1,0 +1,58 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+}
+
+.welcome-message {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-message p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #2e7d32;
+}
+
+.user-details {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-details h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #333;
+}
+
+.user-details p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+.user-details strong {
+    color: #4CAF50;
+}

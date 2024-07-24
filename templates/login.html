@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}">
+    <title>Formulario inicio de Sesion</title>
+</head>
+
+<body>
+    <div class="container register">
+        <div class="inforamtion">
+            <div class="info-childs">
+                <h2>Bienvenidos</h2>
+                <p>Para unirte a nuestra comunidad por favor inicia sesion con tus datos</p>
+                <input type="button" value="Iniciar Sesion" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear Cuenta</h2>
+                <p>Usa tu email para registrarte</p>
+                <form class="formulario" id="register-form" action="/register" method="POST">
+                    <label for="nombre">
+                        <i class='bx bx-user'></i>
+                        <input type="text" placeholder="Nombres Completos" id="nombre" name="nombre" required>
+                    </label>
+                    <label for="email">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" placeholder="Correo electronico" id="email" name="email" required>
+                    </label>
+                    <label for="password">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" id="password" name="password" required>
+                    </label>
+                    <input type="submit" value="Registrarse">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container login hide">
+        <div class="inforamtion">
+            <div class="info-childs">
+                <h2>¡¡Bienvenidos Nuevamente!!</h2>
+                <p>Si aun no tienes una cuenta por favor registrate aqui</p>
+                <div class="buttons">
+                    <input type="button" value="Registrarse" id="sign-up">
+                    <input type="button" value="Recuperar Contraseña" id="recover">
+                </div>
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesion</h2>
+                <p>Iniciar Sesion con una Cuenta</p>
+                <form class="formulario" id="login-form" action="/login" method="POST">
+                    <label for="correo">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="correo" name="email" placeholder="Correo electrónico" required>
+                    </label>
+                    <label for="contraseña">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" id="contraseña" name="password" placeholder="Contraseña" required>
+                    </label>
+                    <input type="submit" value="Iniciar Sesión">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container recov hide">
+        <div class="inforamtion">
+            <div class="info-childs">
+                <h2>Restaurar Contraseña</h2>
+                <p>Por favor, introduce tu correo electrónico, nombre completo y contraseña nueva</p>
+                <input type="button" value="Iniciar Sesion" id="sign-in-recover">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Restaurar Contraseña</h2>
+                <p>introduce tu correo electrónico, nombre completo y contraseña nueva</p>
+                <form class="formulario" id="recover-form" action="/recover" method="POST">
+                    <label for="nombre-recover">
+                        <i class='bx bx-user'></i>
+                        <input type="text" placeholder="Nombres Completos" id="nombre-recover" name="nombre" required>
+                    </label>
+                    <label for="correo-recuperar">
+                        <i class='bx bx-envelope'></i>
+                        <input type="email" id="correo-recuperar" name="email" placeholder="Correo electrónico" required>
+                    </label>
+                    <label for="password-recover">
+                        <i class='bx bx-lock-alt'></i>
+                        <input type="password" placeholder="Contraseña" id="password-recover" name="password" required>
+                    </label>
+                    <input type="submit" value="Recuperar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='javascript/login.js') }}"></script>
+</body>
+
+</html>

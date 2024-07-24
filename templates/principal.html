@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/principal.css') }}">
+    <title>Página Principal</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Bienvenido a Nuestra Comunidad</h1>
+        </header>
+        <main>
+            <section class="welcome-message">
+                <p>¡Hola, <span id="nombre-usuario">{{ usuario.nombre }}</span>! Estamos encantados de tenerte aquí.</p>
+            </section>
+            <section class="user-details">
+                <h2>Detalles del Usuario</h2>
+                <p><strong>Nombre Completo:</strong> <span id="nombre">{{ usuario.nombre }}</span></p>
+                <p><strong>Correo Electrónico:</strong> <span id="correo">{{ usuario.correo }}</span></p>
+                <p><strong>Contraseña:</strong> <span id="password">{{ usuario.password }}</span></p>
+                <button id="logout-btn">Cerrar Sesión</button>
+            </section>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='javascript/principal.js') }}"></script>
+</body>
+
+</html>
